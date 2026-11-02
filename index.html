@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Warung Selera - Beranda</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface": "#1d1b19",
+                        "on-tertiary-container": "#004115",
+                        "background": "#fef8f3",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e7e1dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#5c2800",
+                        "outline": "#8c7263",
+                        "primary-container": "#ff7a00",
+                        "primary-fixed-dim": "#ffb68b",
+                        "secondary-fixed": "#ffdf94",
+                        "on-primary-fixed-variant": "#753400",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#994700",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#53b462",
+                        "primary": "#994700",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-secondary-container": "#6e5400",
+                        "on-tertiary-fixed-variant": "#00531d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb68b",
+                        "surface": "#fef8f3",
+                        "surface-container": "#f3ede8",
+                        "tertiary-fixed-dim": "#79db85",
+                        "on-tertiary-fixed": "#002107",
+                        "surface-container-highest": "#e7e1dd",
+                        "tertiary": "#006e29",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbc8",
+                        "on-primary-fixed": "#321200",
+                        "secondary-container": "#ffc703",
+                        "inverse-surface": "#32302d",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e0c0af",
+                        "surface-dim": "#ded9d4",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f8f3ee",
+                        "surface-bright": "#fef8f3",
+                        "inverse-on-surface": "#f6f0eb",
+                        "surface-container-high": "#ede7e2",
+                        "secondary": "#765b00",
+                        "on-surface-variant": "#584235",
+                        "on-background": "#1d1b19",
+                        "secondary-fixed-dim": "#f5bf00",
+                        "tertiary-fixed": "#95f99e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "container-margin": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "12px",
+                        "base": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 122, 0, 0.05) 0%, transparent 70%);
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-md shadow-primary/5">
+        <div class="flex justify-between items-center px-container-margin h-20 max-w-7xl mx-auto">
+            <a class="font-headline-lg text-headline-lg font-bold text-primary" href="index.html">Warung Selera</a>
+            <div class="hidden md:flex items-center gap-stack-md">
+                <a class="font-headline-md text-headline-md text-primary font-bold border-b-2 border-primary transition-all duration-200"
+                    href="index.html">Beranda</a>
+                <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-primary hover:scale-95 transition-all duration-200"
+                    href="menu.html">Menu</a>
+                <a class="font-headline-md text-headline-md text-on-surface-variant hover:text-primary hover:scale-95 transition-all duration-200"
+                    href="tentangkami.html">Tentang Kami</a>
+            </div>
+            <a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:scale-95 transition-transform duration-200 shadow-md inline-block"
+                href="pesansekarang.html">Pesan Sekarang</a>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden hero-gradient min-h-[870px] flex items-center">
+            <div
+                class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+                <div class="z-10 order-2 md:order-1">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md mb-stack-sm">
+                        Kuliner Legendaris Keluarga
+                    </span>
+                    <h1
+                        class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-stack-md leading-tight">
+                        Lezatnya Tradisi,<br /><span class="text-primary">Segar Setiap Hari</span>
+                    </h1>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-stack-lg max-w-lg">
+                        Nikmati kehangatan semangkuk bakso urat, kesegaran sop-sopan, dan manisnya bubur ketan hitam
+                        yang dibuat dengan resep turun-temurun.
+                    </p>
+                    <div class="flex flex-wrap gap-gutter">
+                        <a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-headline-md text-headline-md hover:scale-95 transition-transform duration-200 shadow-lg shadow-primary/20 inline-block"
+                            href="pesan.html">Pesan Sekarang</a>
+                        <a class="flex items-center gap-2 border-2 border-outline-variant text-on-surface px-8 py-4 rounded-full font-headline-md text-headline-md hover:bg-surface-container transition-colors duration-200 inline-flex"
+                            href="menu.html"><span class="material-symbols-outlined">menu_book</span> Lihat Menu</a>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2 flex justify-center">
+                    <div class="relative w-full aspect-square max-w-md">
+                        <div class="absolute inset-0 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+                        <img alt="Sajian tiga mangkuk makanan tradisional Indonesia: bubur ketan hitam, sop sayur segar, dan bakso sapi hangat di meja kayu."
+                            class="relative z-10 w-full h-full object-cover rounded-full border-8 border-surface-container-lowest shadow-2xl float-animation"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdy5GRBHW8gOf2842U2RZZ4hOGHXQzpGKRYIZ4c7xJ3oCauDzpAOnUXPbFlsyL2QfgA2a3i_oRMMYIAqebv9VaM1XARI1LQ1twzLa_5ToUVvvIIv4Xh7ROESPTRQ6QtlGp9tbwj0n8baIJSFvw6iSWp1PNFGDIMv4v4x8aQ0EXhswIsY7Mm71ht0BmZwoiXwGZwugR0xwhkWdCdj5LEgR1pkGYFkCBsQcraWr40cufBdigCTnryYKP7Wr3qEee7NAFGt4fbTOsYb6V" />
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute -bottom-4 -left-4 z-20 bg-surface-container-lowest p-4 rounded-xl shadow-xl flex items-center gap-3">
+                            <div class="w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-tertiary-container"
+                                    data-weight="fill">verified</span>
+                            </div>
+                            <div>
+                                <p class="font-label-md text-primary">100% Halal</p>
+                                <p class="text-[12px] text-on-surface-variant">Bahan Alami &amp; Segar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Category Grid / Bento Section -->
+        <section class="py-stack-lg max-w-7xl mx-auto px-container-margin">
+            <div class="text-center mb-stack-lg">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Pilihan Favorit Keluarga</h2>
+                <p class="text-on-surface-variant">Menu sehat dan bergizi untuk segala usia</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
+                <!-- Main Featured Item -->
+                <div
+                    class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container shadow-md hover:shadow-xl transition-all duration-300">
+                    <img alt="Mangkuk Bakso Urat Spesial dengan mie, sayuran, dan bawang goreng dalam kaldu gurih."
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2yfPcwJe-vW3Nr5gkfVeBtR2g49k655dlOWvSVOSMdOXQ8k13Bmeb1xPQll2R5J7LDqe5Q2iLOOCPeOyCGXyJS8bsPrJac_jl1eIj-ZGiKgKQwrYLMto4LfJWVB5-z7u1nrlfmlYtvH0cW4Gb2vuRj8ZX8eToddlmE9qdb8PVCbyJNwIW9qcm92lIlA0_hku9dhS14p1Lj8Poqic00h6ibeYTRjS28u2r-KgfFD7rttRJniA2bHNhAtk_yfxfjmbgqi_TN8yA47DG" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-stack-md text-white">
+                        <span
+                            class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-sm font-bold w-fit mb-2">PEDAS
+                            &amp; HANGAT</span>
+                        <h3 class="text-headline-lg font-headline-lg mb-2">Bakso Urat Spesial</h3>
+                        <p class="text-body-md mb-4 opacity-90">Bakso sapi asli dengan tekstur urat yang mantap dan
+                            kaldu gurih.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-headline-md font-headline-md text-secondary-fixed">Rp 25.000</span>
+                            <button
+                                class="bg-white text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                title="Tambah ke Keranjang">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Secondary Item 1 -->
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-container shadow-md hover:shadow-xl transition-all duration-300">
+                    <img alt="Bubur Ketan Hitam kental dengan siraman santan putih segar."
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx-t8RMXrzomnNDuRnbuQTZ39gIULkdl980D_tJzvmnTqKfIqfvPBKtyYOR_GEov2qdrLYIDxad1s_oTfgAmsNJdTcq8Hs4qt-NiP69FRRAQIiLDze2IZ99E4UUKiL0Ti5e6nQ_AZ486ph78hnzjDFtSL5Dyxp76isJOy_IAQ7f2_NEqAfbFwECbbwwrhgizshqwIxGH5uR-cXl_XQMc4QJurLtTZ2S-DkHK8jQYQqFO_C7KqIvNc7ChFCzHD9tl27ahx3xFCew0mB" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-gutter text-white">
+                        <span
+                            class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-sm font-bold w-fit mb-2">FAVORIT
+                            ANAK</span>
+                        <h3 class="text-headline-md font-headline-md">Bubur Ketan Item</h3>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-body-lg font-bold">Rp 15.000</span>
+                            <span class="material-symbols-outlined text-secondary-fixed" data-weight="fill">star</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Secondary Item 2 -->
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-container shadow-md hover:shadow-xl transition-all duration-300">
+                    <img alt="Sop Ayam Segar dengan wortel, buncis, dan suwiran ayam dalam kaldu bening."
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUd8dQnLXKCaX0UzwAbpd9GTe2NTyDIoltBZLV5dkDU__kEqTExg44rdc-strYlXw2RoeRU0uFJZ4zU2FBmwqPqdF6D3g8PHpsOxkSCUUPriQC9RCBAl41xBTPFCFsL2rlgi9QA0NBBNU2B9T9DZTDAXyA78YVcyaRjDNEcDP67csd_Nr8aYWZW_9sAn0tkMkdFW3BLP7F5eTXYAA-9psfhex0TQikOERK3Uh8ETDW-taVmRUHifuGZlYudeHgWgTfa-JkCxx9kwQ8" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-gutter text-white">
+                        <span
+                            class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-sm font-bold w-fit mb-2">SEGAR
+                            &amp; SEHAT</span>
+                        <h3 class="text-headline-md font-headline-md">Sop Ayam Segar</h3>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-body-lg font-bold">Rp 18.000</span>
+                            <span class="material-symbols-outlined text-secondary-fixed" data-weight="fill">eco</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Promo Banner in Bento -->
+                <div
+                    class="md:col-span-2 bg-primary-container rounded-xl p-stack-md flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-black/5 rounded-full -ml-12 -mb-12"></div>
+                    <h3 class="text-headline-lg font-headline-lg text-on-primary-container mb-2">Makan Siang Hemat!</h3>
+                    <p class="text-on-primary-container/80 mb-6 font-body-md">Dapatkan diskon 20% untuk pembelian paket
+                        Bakso + Bubur Ketan setiap hari Senin - Jumat.</p>
+                    <button
+                        class="bg-inverse-surface text-inverse-on-surface px-8 py-3 rounded-full font-label-md hover:scale-105 transition-transform duration-200">
+                        Klaim Promo
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Atmosphere Section -->
+        <section class="py-stack-lg bg-surface-container-low">
+            <div
+                class="max-w-7xl mx-auto px-container-margin grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+                <div class="order-2 md:order-1 grid grid-cols-2 gap-gutter">
+                    <img alt="Interior Warung Selera yang nyaman dengan meja kayu and lampu hias tradisional."
+                        class="rounded-xl shadow-md w-full h-48 object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvWCXpaQppCLiFbUbtQ9XfywC2o_TQRncZpkmyWg3q9VUaq52QVx8GpsAbJ986iSUORQvaXIP7So62xSZRsQhaT5UmL5O4I1Ytui4fkA4zdoVGMSPORHDiRMbfz0wWo_jUTtQ17DhtWwkWCFjInQGhUpO4AlK1RVmv_9ZLGluPGfHyPAlLcKfW8gT_QMRUJh80MN48WJdbrgFetY3ecepoXfhgAULCOHGs6w8HuNJkf7va7GVFAOPnzUmYd-ioDSVTNb9kJugRs4Es" />
+                    <img alt="Pelayanan ramah di kasir Warung Selera yang bersih dan profesional."
+                        class="rounded-xl shadow-md w-full h-48 object-cover mt-stack-md"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgFAcvWUKO51yJq1u88L7dsMcrJNw2f9IlrDxoqQhmWRicl8iZZb9-xM5LXWnL-oaJUuEjxA0mpE12SEuEQm_e4Ov2OzSccJV_PzZ7zWOSNQKxXWPrhm_AME4pmyjV7ITUO-3WQtkYu3fJh3qeazDoTxfap2QFIi2-z1q1i5zehMYvzrSGwcnNj3hxmeEHuuLrHcPyt_O1HoJY4GKyo698slD4c1xM5UgQvPrxVoThC9zWIkBiiNypl0yr31J8HUK7kgaYJfTswlo8" />
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">Suasana Nyaman Untuk Semua
+                    </h2>
+                    <p class="text-body-lg text-on-surface mb-stack-md">Warung Selera bukan sekadar tempat makan. Kami
+                        mendesain ruang yang hangat untuk kumpul keluarga, area bermain yang aman untuk anak, dan
+                        koneksi internet cepat bagi Anda yang ingin bekerja sambil menikmati sop hangat.</p>
+                    <ul class="space-y-base">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            <span class="font-body-md">Area Makan Luas &amp; Bersih</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            <span class="font-body-md">Ramah Anak (Fasilitas kursi bayi tersedia)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            <span class="font-body-md">Pelayanan Cepat &amp; Ramah</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-stack-lg bg-surface-container-highest">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center px-container-margin py-stack-lg gap-gutter max-w-7xl mx-auto">
+            <div class="space-y-base">
+                <a class="font-headline-md text-headline-md text-primary" href="index.html">Warung Selera</a>
+                <p class="font-body-md text-body-md text-on-surface opacity-90 max-w-xs">
+                    © 2024 Warung Selera. Cita Rasa Rumahan, Segar Setiap Hari.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:flex md:gap-stack-md gap-4">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                    href="tentang.html">Info Kontak</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                    href="tentang.html">Lokasi Kami</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Kebijakan
+                    Privasi</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Syarat
+                    &amp; Ketentuan</a>
+            </div>
+            <div class="flex gap-gutter">
+                <div
+                    class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container transition-colors cursor-pointer group">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container">location_on</span>
+                </div>
+                <div
+                    class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container transition-colors cursor-pointer group">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container">mail</span>
+                </div>
+                <div
+                    class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container transition-colors cursor-pointer group">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container">call</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Bottom Navigation -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-md shadow-lg flex justify-around items-center h-16 border-t border-outline-variant/10 z-50">
+        <a class="flex flex-col items-center gap-1 text-primary" href="index.html">
+            <span class="material-symbols-outlined" data-weight="fill">home</span>
+            <span class="text-[10px] font-bold">Beranda</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="menu.html">
+            <span class="material-symbols-outlined">restaurant_menu</span>
+            <span class="text-[10px]">Menu</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="pesan.html">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="text-[10px]">Pesanan</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="tentang.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px]">Profil</span>
+        </a>
+    </div>
+    <script>
+        // Quantity Selector Interaction (Conceptual Micro-interaction)
+        document.querySelectorAll('.group button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+
+</html>

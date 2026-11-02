@@ -1,0 +1,484 @@
+<html lang="id">
+
+<head></head>
+
+<body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    ```html
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Warung Selera - Menu Kami</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-card {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface": "#1d1b19",
+                        "on-tertiary-container": "#004115",
+                        "background": "#fef8f3",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e7e1dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#5c2800",
+                        "outline": "#8c7263",
+                        "primary-container": "#ff7a00",
+                        "primary-fixed-dim": "#ffb68b",
+                        "secondary-fixed": "#ffdf94",
+                        "on-primary-fixed-variant": "#753400",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#994700",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#53b462",
+                        "primary": "#994700",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-secondary-container": "#6e5400",
+                        "on-tertiary-fixed-variant": "#00531d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb68b",
+                        "surface": "#fef8f3",
+                        "surface-container": "#f3ede8",
+                        "tertiary-fixed-dim": "#79db85",
+                        "on-tertiary-fixed": "#002107",
+                        "surface-container-highest": "#e7e1dd",
+                        "tertiary": "#006e29",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbc8",
+                        "on-primary-fixed": "#321200",
+                        "secondary-container": "#ffc703",
+                        "inverse-surface": "#32302d",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e0c0af",
+                        "surface-dim": "#ded9d4",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f8f3ee",
+                        "surface-bright": "#fef8f3",
+                        "inverse-on-surface": "#f6f0eb",
+                        "surface-container-high": "#ede7e2",
+                        "secondary": "#765b00",
+                        "on-surface-variant": "#584235",
+                        "on-background": "#1d1b19",
+                        "secondary-fixed-dim": "#f5bf00",
+                        "tertiary-fixed": "#95f99e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "container-margin": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "12px",
+                        "base": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- Navigation Header -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-surface-dim/90 shadow-md shadow-primary/5">
+        <div class="flex justify-between items-center px-container-margin h-20 max-w-7xl mx-auto">
+            <div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim"><a
+                    class="" href="index.html">Warung Selera</a></div>
+            <div class="hidden md:flex items-center gap-stack-lg">
+                <a class="font-headline-md text-headline-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-200 ease-in-out hover:scale-95"
+                    href="index.html">Beranda</a>
+                <a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary transition-all duration-200 ease-in-out hover:scale-95"
+                    href="menu.html">Menu</a>
+                <a class="font-headline-md text-headline-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-200 ease-in-out hover:scale-95"
+                    href="tentangkami.html">Tentang Kami</a>
+            </div>
+            <div class="flex items-center gap-gutter">
+                <div class="relative group">
+                    <a class="flex items-center gap-2 px-6 py-2.5 bg-primary-container text-on-primary-container rounded-full font-label-md transition-all duration-200 hover:scale-95 shadow-sm active:scale-90"
+                        href="pesansekarang.html"><span class="material-symbols-outlined">shopping_cart</span><span
+                            class="">Pesan Sekarang</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-16 px-container-margin max-w-7xl mx-auto overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center text-center">
+            <span
+                class="inline-block px-4 py-1.5 mb-stack-sm bg-tertiary-container/20 text-tertiary font-label-md rounded-full border border-tertiary/30">Cita
+                Rasa Lokal Autentik</span>
+            <h1 class="font-headline-xl text-headline-xl mb-base text-on-surface">Jelajahi Menu Lezat Kami</h1>
+            <p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Dari kehangatan Bakso kami hingga
+                manisnya Bubur Ketan, setiap hidangan dibuat dengan bahan segar dan resep tradisional.</p>
+        </div>
+        <!-- Decorative Background Blob -->
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/10 blur-[100px] rounded-full"></div>
+        <div class="absolute top-40 -left-20 w-80 h-80 bg-secondary-container/10 blur-[80px] rounded-full"></div>
+    </header>
+    <!-- Category Filter (Chips) -->
+    <section
+        class="sticky top-20 z-40 bg-surface/80 backdrop-blur-sm py-gutter mb-stack-lg border-b border-surface-container">
+        <div class="flex items-center justify-center gap-gutter px-container-margin overflow-x-auto no-scrollbar">
+            <a class="flex-shrink-0 px-6 py-2 rounded-full border-2 border-primary-container bg-surface text-primary font-label-md hover:bg-primary-container/10 transition-colors"
+                href="#bubur-ketan">Bubur Ketan</a>
+            <a class="flex-shrink-0 px-6 py-2 rounded-full border-2 border-primary bg-primary text-on-primary font-label-md hover:bg-primary/90 transition-colors"
+                href="#bakso">Spesial Bakso</a>
+            <a class="flex-shrink-0 px-6 py-2 rounded-full border-2 border-tertiary text-tertiary font-label-md hover:bg-tertiary-container/10 transition-colors"
+                href="#sop-sopan">Sop-Sopan</a>
+        </div>
+    </section>
+    <main class="max-w-7xl mx-auto px-container-margin space-y-stack-lg pb-stack-lg">
+        <!-- Section: Bubur Ketan -->
+        <section class="scroll-mt-40" id="bubur-ketan">
+            <div class="flex items-center gap-gutter mb-stack-md">
+                <span class="p-2 bg-primary-container/20 text-primary rounded-xl">
+                    <span class="material-symbols-outlined">icecream</span>
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Bubur Ketan (Manis Memanjakan)</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Item Card 1 -->
+                <div
+                    class="bg-surface-container-low p-gutter rounded-xl shadow-md shadow-primary/5 border border-surface-variant/50 flex flex-col group hover:shadow-lg transition-all duration-300">
+                    <div class="relative w-full aspect-square mb-gutter overflow-hidden rounded-lg">
+                        <img alt="Bubur Ketan Hitam"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSyeHiWWRHnKUjFChm4jCC5j1HgE9Vu5k_kuQ1U7J5P7AhOT7aNxYXY-sdZCjEAKQn8wvcnWbd5XePFhBuyDuUyajooVm8EVjzXi_gu5s9m2y1d5AIDMizCE40bTPn5Fzh6d6qSPUTMAFAGHyPNL1aFcuntiAxLDzWldHwCwRCXsIzgU2Z8m0v3CtvplujyOD4PHfTbR8g-tWDDiVT6mWQfPWA76_5LQcdM3uXSrNIgFUmXQUPc9d93fz70rELE2XmfcaU9CAbGvEk" />
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur rounded-full text-primary font-bold shadow-sm">
+                            Rp 18rb</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-base">Ketan Hitam Klasik</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Ketan hitam pulen yang
+                            dimasak sempurna, disajikan dengan siraman santan kental yang gurih.</p>
+                    </div>
+                    <button
+                        class="w-full py-3 bg-primary-container text-on-primary-container font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+                <!-- Item Card 2 -->
+                <div
+                    class="bg-surface-container-low p-gutter rounded-xl shadow-md shadow-primary/5 border border-surface-variant/50 flex flex-col group hover:shadow-lg transition-all duration-300">
+                    <div class="relative w-full aspect-square mb-gutter overflow-hidden rounded-lg">
+                        <img alt="Ketan Mix"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsSz6f5uI3T001kx20TOVDVm_xbwWeWsE-8cNddQIDisDs9heYniNEOWuf2jivsV1hZFt96V_W8Z2OfwTbzwLlVuSlEr3ysNvrBdi4oQEUL5l5k2ce1rc55bE3RPrhUFH_omnXZs5DwMuDfxw6BIG0ejhiPWj6GY3PNH918w4Cb88c7F5pLk1_fq8BRd7UZxrjvOxGPvbMASwkeRlIdu6-xo-mMUkr4JAeUHI5mOZeLldfM1zgQm53tSFbqodD6qYsl4ExAX9Y6Zzf" />
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur rounded-full text-primary font-bold shadow-sm">
+                            Rp 22rb</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-base">Ketan Sumsum Duo</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Perpaduan sempurna: bubur
+                            sumsum yang lembut bertemu dengan ketan hitam dengan siraman gula merah.</p>
+                    </div>
+                    <button
+                        class="w-full py-3 bg-primary-container text-on-primary-container font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Bakso -->
+        <section class="scroll-mt-40" id="bakso">
+            <div class="flex items-center gap-gutter mb-stack-md">
+                <span class="p-2 bg-secondary-container/20 text-secondary rounded-xl">
+                    <span class="material-symbols-outlined">restaurant</span>
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Bakso (Gurih dan Mantap)</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- Large Horizontal Item Card -->
+                <div
+                    class="bg-surface-container-low p-gutter rounded-xl shadow-md shadow-primary/5 border border-surface-variant/50 flex flex-col md:flex-row gap-gutter group hover:shadow-lg transition-all duration-300">
+                    <div class="w-full md:w-1/2 aspect-square md:aspect-auto md:h-64 overflow-hidden rounded-lg">
+                        <img alt="Bakso Urat"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0vQd734tR5DO-CQ5mlMw2iu9Fk90stgSqMJ_bdNpoaAlGtMm65nkXk_zlIeC7uRrS2eO1G3Ma3EC8T6SHdfpE5JEPeWxeQzjr7yMvHMjudbFp3-XpSU19NBjfZ5JaGNK_83Tx3Qrg92246IOvZcWyC3dBdTZWcg6nY040IRzHa947IXAwCJ_auC0HMm9J07qBU9JLc1iW2wpEd2LZXYqc8m3FJOoqL78uUjzdraywFsXNdrk5wSk1XfSt_kHl6_9ycGDF5XJtrHej" />
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-base">
+                                <h3 class="font-headline-md text-headline-md text-on-surface">Bakso Urat Spesial</h3>
+                                <span class="text-primary font-bold text-headline-md">Rp 35rb</span>
+                            </div>
+                            <div class="flex gap-2 mb-base">
+                                <span
+                                    class="px-2 py-0.5 bg-primary-container/10 border border-primary-container/30 text-primary-fixed-dim text-xs font-bold rounded">PANAS</span>
+                                <span
+                                    class="px-2 py-0.5 bg-secondary-container/10 border border-secondary-container/30 text-secondary text-xs font-bold rounded">PALING
+                                    LARIS</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Bakso sapi asli
+                                dengan tekstur urat yang mantap, disajikan dalam kaldu tulang sapi 12 jam khas kami.</p>
+                        </div>
+                        <div class="flex items-center gap-gutter">
+                            <div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full transition-colors"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span class="w-8 text-center font-bold">1</span>
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full transition-colors"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button
+                                class="flex-grow py-3 bg-secondary-container text-on-secondary-container font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform">
+                                Tambah ke Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Another Bakso Item -->
+                <div
+                    class="bg-surface-container-low p-gutter rounded-xl shadow-md shadow-primary/5 border border-surface-variant/50 flex flex-col md:flex-row gap-gutter group hover:shadow-lg transition-all duration-300">
+                    <div class="w-full md:w-1/2 aspect-square md:aspect-auto md:h-64 overflow-hidden rounded-lg">
+                        <img alt="Bakso Telur"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-GtG0mxhPzM32Hj5NMjc9eepc90jy7XaaBVVqmB0aC1BTi17DkJUk_zfc-Jz49fC-e5N0ArnhOcudX5xFEQ2560gdSxHbYb0oWxgcT_TByS8OXbnBir6NVP8Wds5fspPWWqzXBB8bN_QGbOfilmT4zclXXUp3jDqQwWJdtwVjFye-Zgn96fJ_7-nHZJ_K6yEmuxdevfYCPTtDQ5HWIA5VXRjKw1wHp84IrUH6oeag64SSh6tBIAyL-FovicJuq0tPsTV50_iSbwSE" />
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-base">
+                                <h3 class="font-headline-md text-headline-md text-on-surface">Bakso Telur Puyuh</h3>
+                                <span class="text-primary font-bold text-headline-md">Rp 28rb</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Bakso sapi besar
+                                dengan isian telur puyuh utuh. Kejutan di setiap gigitan, disajikan dengan sawi segar.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-gutter">
+                            <div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full transition-colors"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span class="w-8 text-center font-bold">1</span>
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full transition-colors"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button
+                                class="flex-grow py-3 bg-secondary-container text-on-secondary-container font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform">
+                                Tambah ke Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Sop-Sopan -->
+        <section class="scroll-mt-40" id="sop-sopan">
+            <div class="flex items-center gap-gutter mb-stack-md">
+                <span class="p-2 bg-tertiary-container/20 text-tertiary rounded-xl">
+                    <span class="material-symbols-outlined">eco</span>
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Sop-Sopan (Sop Sayur Segar)</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Sop Card 1 -->
+                <div
+                    class="glass-card p-gutter rounded-xl shadow-md border border-tertiary/20 flex flex-col group transition-all duration-300">
+                    <div class="relative w-full aspect-video mb-gutter overflow-hidden rounded-lg">
+                        <img alt="Sop Ayam" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXnju87HFwk-M3jEcvsVl4CF7vwQ7BL8_llPn9U0errgeMBYmw6B1-jyPwNZiMmz_yhUE_PT8echFdPMkplX382USJGlnyAofXsVZ8GR4iy14-H8mqZ5_x8U-kzARa1DLqcb-vJnkcSLkTr6atz7EZFE1MHEQAHx1JPu6PJcWXEmQ5BTIz8kgHbZ6f9NUNtvVJ4ECkakarE2nReoJrbmRSSf0ps0v9yxuVar8r7gqjvBxbkXJOLHVReboWdn4ZWbrD2vFBJtJXYeO8" />
+                        <div
+                            class="absolute bottom-3 left-3 px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-bold rounded-full">
+                            Pilihan Sehat</div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-center mb-base">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Sop Ayam Bening</h3>
+                            <span class="text-tertiary font-bold">Rp 25rb</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Sop ayam bening
+                            bernutrisi dengan wortel segar, kentang, and seledri. Ringan dan memulihkan energi.</p>
+                    </div>
+                    <button
+                        class="w-full py-3 bg-primary text-on-primary font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform">
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+                <!-- Sop Card 2 -->
+                <div
+                    class="glass-card p-gutter rounded-xl shadow-md border border-tertiary/20 flex flex-col group transition-all duration-300">
+                    <div class="relative w-full aspect-video mb-gutter overflow-hidden rounded-lg">
+                        <img alt="Sop Buntut" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvBZMFkjLluDx4cFpsHFdAyAY2CuVWmmc054wDkTLu6VzLEvMUyomfxvDiO_QEBpj_NnIf1Awa1D9XqV-hduiJe-qwnUUDfJWHufgLOp9Ca69HEp5ZCCmGJFQC0Jtg2npvNZuZpTp8gv6sQiHk8mQtdtrX2mShFgF8HEB1eOyADcWYFwqYxBV26PwvwGkxo3MYtumffpszQ5e5mgAdBve259E4ShPmXSSd3PwYxUzkNgJioMg0mMvK3RpY1o27rtO9iepYSVRTNjcz" />
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-center mb-base">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Sop Buntut Premium</h3>
+                            <span class="text-tertiary font-bold">Rp 65rb</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Buntut sapi yang dimasak
+                            perlahan dalam kaldu rempah yang kaya rasa. Disajikan dengan bawang goreng dan jeruk nipis.
+                        </p>
+                    </div>
+                    <button
+                        class="w-full py-3 bg-primary text-on-primary font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform">
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+                <!-- Sop Card 3 -->
+                <div
+                    class="glass-card p-gutter rounded-xl shadow-md border border-tertiary/20 flex flex-col group transition-all duration-300">
+                    <div class="relative w-full aspect-video mb-gutter overflow-hidden rounded-lg">
+                        <img alt="Sayur Lodeh" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZLsiuVqc5HxFFy4RbsQT3S2HEKJykKW_5L764VJgbag5-1iF9dfZ12wGgU68NwCgxsQBUXdfqXCTqBq75tM3QhXGljHuqJ5Joc1WtNGYJZPJfq-4Fkt5otSU9OvgfaHqKfa-aTj91IjbSv7W_xrxFM52mifN2YjPvniIXuCOhmby3zZh0U-fYWzeDea05Q_bBCEAADK3t4b_toaXo5EwcUDz9ty5mdazjMpSPXa63trGupkzMwWFve9oGPPWfQHccDybGSPCs2xI" />
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-center mb-base">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Sayur Lodeh Gurih</h3>
+                            <span class="text-tertiary font-bold">Rp 20rb</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Sop sayur tradisional
+                            dengan kuah santan ringan, dibumbui dengan lengkuas dan daun salam.</p>
+                    </div>
+                    <button
+                        class="w-full py-3 bg-primary text-on-primary font-label-md rounded-full shadow-sm hover:scale-95 active:scale-90 transition-transform">
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-stack-lg bg-surface-container-highest dark:bg-inverse-surface">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center px-container-margin py-stack-lg gap-gutter max-w-7xl mx-auto">
+            <div class="space-y-base">
+                <div class="font-headline-md text-headline-md text-primary">Warung Selera</div>
+                <p class="font-body-md text-body-md text-on-surface max-w-xs opacity-90">© 2024 Warung Selera. Cita Rasa
+                    Wholesome, Segar Setiap Hari.</p>
+            </div>
+            <div class="flex flex-wrap gap-stack-md">
+                <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+                    href="tentang.html">Info Kontak</a>
+                <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+                    href="tentang.html">Lokasi Kami</a>
+                <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+                    href="#">Kebijakan Privasi</a>
+                <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+                    href="#">Ketentuan Layanan</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Navigation Shell -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-surface-variant z-50">
+        <div class="flex justify-around items-center h-16">
+            <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="index.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-[10px] font-label-md">Beranda</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-primary" href="menu.html">
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+                <span class="text-[10px] font-label-md">Menu</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="tentang.html">
+                <span class="material-symbols-outlined">info</span>
+                <span class="text-[10px] font-label-md">Tentang</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="index.html">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-[10px] font-label-md">Profil</span>
+            </a>
+        </div>
+    </div>
+    <!-- Floating Action Button (Only on Mobile Menu Context) -->
+    <button
+        class="md:hidden fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center z-50 active:scale-90 transition-transform"
+        onclick="window.location.href='pesan.html'">
+        <span class="material-symbols-outlined">shopping_basket</span>
+    </button>
+    <script>
+        // Simple Interaction: Smooth Scroll for filter chips
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Micro-interaction for Add to Cart
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.innerText.includes('Tambah ke Keranjang')) {
+                btn.addEventListener('click', function () {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Berhasil!';
+                    this.classList.add('bg-tertiary-container');
+                    this.classList.remove('bg-primary-container', 'bg-primary', 'bg-secondary-container');
+
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.remove('bg-tertiary-container');
+                        // In a real app, logic would restore original container color class
+                        // For this deployment, we skip location.reload() to maintain state if any
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+
+
+    ```
+</body>
+
+</html>

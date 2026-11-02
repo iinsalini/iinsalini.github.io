@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pesan Sekarang - Warung Selera</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface": "#1d1b19",
+                        "on-tertiary-container": "#004115",
+                        "background": "#fef8f3",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e7e1dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#5c2800",
+                        "outline": "#8c7263",
+                        "primary-container": "#ff7a00",
+                        "primary-fixed-dim": "#ffb68b",
+                        "secondary-fixed": "#ffdf94",
+                        "on-primary-fixed-variant": "#753400",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#994700",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#53b462",
+                        "primary": "#994700",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-secondary-container": "#6e5400",
+                        "on-tertiary-fixed-variant": "#00531d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb68b",
+                        "surface": "#fef8f3",
+                        "surface-container": "#f3ede8",
+                        "tertiary-fixed-dim": "#79db85",
+                        "on-tertiary-fixed": "#002107",
+                        "surface-container-highest": "#e7e1dd",
+                        "tertiary": "#006e29",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbc8",
+                        "on-primary-fixed": "#321200",
+                        "secondary-container": "#ffc703",
+                        "inverse-surface": "#32302d",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e0c0af",
+                        "surface-dim": "#ded9d4",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f8f3ee",
+                        "surface-bright": "#fef8f3",
+                        "inverse-on-surface": "#f6f0eb",
+                        "surface-container-high": "#ede7e2",
+                        "secondary": "#765b00",
+                        "on-surface-variant": "#584235",
+                        "on-background": "#1d1b19",
+                        "secondary-fixed-dim": "#f5bf00",
+                        "tertiary-fixed": "#95f99e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "container-margin": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "12px",
+                        "base": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .order-step-active {
+            border-bottom: 2px solid #994700;
+            color: #994700;
+            font-weight: 700;
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        input[type="radio"]:checked+label {
+            border-color: #ff7a00;
+            background-color: #fff8f3;
+        }
+
+        .scale-tap:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 shadow-md shadow-primary/5 bg-surface/90 backdrop-blur-md h-20">
+        <nav class="flex justify-between items-center px-container-margin h-full max-w-7xl mx-auto">
+            <a class="font-headline-lg text-headline-lg font-bold text-primary" href="index.html">Warung Selera</a>
+            <div class="hidden md:flex items-center gap-stack-md">
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-200"
+                    href="index.html">Beranda</a>
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-200"
+                    href="menu.html">Menu</a>
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-200"
+                    href="tentank
+                    g.html">Tentang Kami</a>
+                <a class="bg-primary-container text-on-primary-container font-label-md py-2 px-6 rounded-full hover:scale-95 transition-transform duration-200 font-bold shadow-md shadow-primary/10 inline-block"
+                    href="pesansekarang.html">Pesan Sekarang</a>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="pt-32 pb-stack-lg px-container-margin max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-stack-lg">
+            <!-- Left Side: Selection & Form -->
+            <div class="flex-grow lg:w-2/3 space-y-stack-lg">
+                <section>
+                    <h1 class="font-headline-xl text-headline-xl mb-base">Pesan Sekarang</h1>
+                    <p class="text-on-surface-variant">Lengkapi detail pesanan Anda dan biarkan kami menghantarkan
+                        kelezatan yang menyehatkan ke depan pintu Anda.</p>
+                </section>
+                <!-- Step 1: Menu Selection -->
+                <div class="bg-surface-container-low p-stack-md rounded-xl shadow-sm">
+                    <div class="flex items-center gap-gutter mb-stack-md">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                            1</div>
+                        <h2 class="font-headline-md text-headline-md">Pilih Menu Anda</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                        <!-- Food Item 1 -->
+                        <div
+                            class="bg-surface-bright p-stack-sm rounded-xl border border-transparent hover:border-primary-container transition-all group relative">
+                            <img class="w-full aspect-square object-cover rounded-lg mb-stack-sm shadow-sm group-hover:shadow-md transition-shadow"
+                                data-alt="Bubur Ketan Hitam"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJdXlm_bxT8ZCT4FcnIqOUlgG-sM4nfbkFCldMZYlt02BEZWvCyfuJebQqwCCd7FAoCvmNAhh1VIfnZWyulx-TZxh8hyzt5Y2L7ZKpFRACBODZylEnE1Sq-tuOLytyRx907gpvNIcCnFWS1DURB05LXW85ikKaSQB65fuT3fchEpJU7A43XaVZ8_-fX5mo7Oz6Tz7TsUA1kz3K6Ni6PTtKfXp6IqutMh6xoFxSMxJjFA_IjNAsTaEfLkeGp-00vSJSC-ZeU4Trlq4T" />
+                            <h3 class="font-headline-md text-primary">Bubur Ketan</h3>
+                            <p class="text-body-md text-on-surface-variant mb-stack-sm">Ketan hitam manis dengan santan
+                                kental.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-primary">Rp 15.000</span>
+                                <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="decrement('q-bubur')"><span
+                                            class="material-symbols-outlined text-sm">remove</span></button>
+                                    <span class="px-3 font-bold" id="q-bubur">0</span>
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="increment('q-bubur')"><span
+                                            class="material-symbols-outlined text-sm">add</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Food Item 2 -->
+                        <div
+                            class="bg-surface-bright p-stack-sm rounded-xl border border-transparent hover:border-primary-container transition-all group">
+                            <img class="w-full aspect-square object-cover rounded-lg mb-stack-sm shadow-sm"
+                                data-alt="Bakso Spesial"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Rt8BLUx6dKpiUbeutJ3-P6vL7EXwtmwCzP4I2RgGYZ1iN2fR7gs62vXvjeWuPFXOcS9Bya2dhdoOLZZc_gUvEISfL8Zuka5hzEGEw4UxUH19bY3XSfJmgp2mnschmOkAYzHI-c5mamcis1LoQWX9dnDVnBGp23GDELf4LI02QFmrNPA0pOPdpFkQYBtAMW01MxHwLJEXfB4aVWAVtffBwxvfY8pqkZ4oUoO-PwPE56rKGuHbzjdhG7MuSQ0KVjEbqp1SXYxD4w9I" />
+                            <h3 class="font-headline-md text-primary">Bakso Spesial</h3>
+                            <p class="text-body-md text-on-surface-variant mb-stack-sm">Bakso daging sapi nikmat dengan
+                                mie kuning.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-primary">Rp 25.000</span>
+                                <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="decrement('q-bakso')"><span
+                                            class="material-symbols-outlined text-sm">remove</span></button>
+                                    <span class="px-3 font-bold" id="q-bakso">0</span>
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="increment('q-bakso')"><span
+                                            class="material-symbols-outlined text-sm">add</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Food Item 3 -->
+                        <div
+                            class="bg-surface-bright p-stack-sm rounded-xl border border-transparent hover:border-primary-container transition-all group">
+                            <img class="w-full aspect-square object-cover rounded-lg mb-stack-sm shadow-sm"
+                                data-alt="Sop-Sopan"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxDs55PsDaxP3ROK9RCv6C11kv0qGdPBEFuKR4m7VQIuNxIThTXQ_ncfiGjVich_dDqXb12f9nLCIEKd87V_hamRC3Y7S5McKmUZtsqGfrE7Jo_Hz0eBS5Vus3oeKv4_A3CDH9Qt53Wm52lw-POdHLZHZ2wwYWUdxgcYyGLEW_-_wSUiOsgyMmjSWIaN2J5Q2uxZqm34mSJcpScMUz2iNw1hdpgIjW92TI9SrzVlOG0ZUL4l9SOtSiL4aUHc2P3M_Qf2lVWHXcuDqB" />
+                            <h3 class="font-headline-md text-primary">Sop-Sopan</h3>
+                            <p class="text-body-md text-on-surface-variant mb-stack-sm">Sop sayuran sehat dengan
+                                potongan ayam.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-primary">Rp 20.000</span>
+                                <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="decrement('q-sop')"><span
+                                            class="material-symbols-outlined text-sm">remove</span></button>
+                                    <span class="px-3 font-bold" id="q-sop">0</span>
+                                    <button class="w-8 h-8 flex items-center justify-center text-primary scale-tap"
+                                        onclick="increment('q-sop')"><span
+                                            class="material-symbols-outlined text-sm">add</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2: Delivery Details -->
+                <div class="bg-surface-container-low p-stack-md rounded-xl shadow-sm">
+                    <div class="flex items-center gap-gutter mb-stack-md">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                            2</div>
+                        <h2 class="font-headline-md text-headline-md">Detail Pengiriman</h2>
+                    </div>
+                    <form class="space-y-gutter">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-on-surface-variant">Nama Lengkap</label>
+                                <input
+                                    class="bg-surface border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg p-3 outline-none transition-all"
+                                    placeholder="misal: Budi Santoso" type="text" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-on-surface-variant">Nomor Telepon</label>
+                                <input
+                                    class="bg-surface border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg p-3 outline-none transition-all"
+                                    placeholder="0812xxxx" type="tel" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="font-label-md text-on-surface-variant">Alamat Pengiriman Lengkap</label>
+                            <textarea
+                                class="bg-surface border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg p-3 outline-none transition-all"
+                                placeholder="Nama jalan, nomor rumah, patokan..." rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <!-- Step 3: Payment Method -->
+                <div class="bg-surface-container-low p-stack-md rounded-xl shadow-sm">
+                    <div class="flex items-center gap-gutter mb-stack-md">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                            3</div>
+                        <h2 class="font-headline-md text-headline-md">Metode Pembayaran</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                        <div class="relative">
+                            <input checked="" class="hidden peer" id="cod" name="payment" type="radio" value="cod" />
+                            <label
+                                class="flex items-center gap-gutter p-stack-sm rounded-xl border-2 border-surface-variant cursor-pointer transition-all peer-checked:border-primary-container peer-checked:bg-primary-fixed/20"
+                                for="cod">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                                    <span class="material-symbols-outlined">payments</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Bayar di Tempat (COD)</p>
+                                    <p class="text-xs text-on-surface-variant">Bayar saat makanan tiba</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input class="hidden peer" id="bank" name="payment" type="radio" value="bank" />
+                            <label
+                                class="flex items-center gap-gutter p-stack-sm rounded-xl border-2 border-surface-variant cursor-pointer transition-all peer-checked:border-primary-container peer-checked:bg-primary-fixed/20"
+                                for="bank">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+                                    <span class="material-symbols-outlined">account_balance</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Transfer Bank</p>
+                                    <p class="text-xs text-on-surface-variant">Konfirmasi instan</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side: Order Summary -->
+            <aside class="lg:w-1/3">
+                <div class="sticky top-24 space-y-stack-md">
+                    <div
+                        class="bg-surface-container-high p-stack-md rounded-2xl shadow-lg border border-surface-variant">
+                        <h2
+                            class="font-headline-md text-headline-md mb-stack-sm border-b border-outline-variant pb-base">
+                            Ringkasan Pesanan</h2>
+                        <div class="space-y-gutter py-stack-sm min-h-[100px]" id="cart-items">
+                            <!-- Dynamic Cart Items injected here -->
+                            <p class="text-on-surface-variant text-center py-base">Belum ada menu terpilih.</p>
+                        </div>
+                        <div class="border-t border-outline-variant pt-stack-sm space-y-2">
+                            <div class="flex justify-between text-on-surface-variant">
+                                <span class="">Subtotal</span>
+                                <span class="" id="subtotal">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between text-on-surface-variant">
+                                <span class="">Biaya Pengiriman</span>
+                                <span class="" id="delivery-fee">Rp 5.000</span>
+                            </div>
+                            <div class="flex justify-between font-bold text-headline-md text-primary pt-2">
+                                <span class="">Total</span>
+                                <span class="" id="total-price">Rp 5.000</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-primary-container text-on-primary-container font-headline-md py-4 rounded-full mt-stack-md hover:scale-[0.98] active:scale-95 transition-all shadow-md shadow-primary/20 font-bold"
+                            onclick="handlePlaceOrder()">
+                            Konfirmasi Pesanan
+                        </button>
+                        <div class="mt-stack-sm flex items-center gap-2 justify-center text-on-surface-variant text-sm">
+                            <span class="material-symbols-outlined text-base">verified_user</span>
+                            <span class="">Pembayaran Aman dengan Warung Selera</span>
+                        </div>
+                    </div>
+                    <!-- Promo Card -->
+                    <div class="bg-secondary-container p-stack-sm rounded-xl flex items-center gap-gutter">
+                        <div class="bg-white/40 p-2 rounded-lg">
+                            <span class="material-symbols-outlined text-on-secondary-container">auto_awesome</span>
+                        </div>
+                        <p class="text-on-secondary-container font-label-md">Pesan di atas Rp 100rb untuk <b>Gratis
+                                Ongkir!</b></p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <!-- Footer Content Section -->
+    <section class="max-w-7xl mx-auto px-container-margin mb-stack-lg">
+        <div
+            class="bg-surface-container-low p-stack-md rounded-xl border border-outline-variant/30 flex flex-col md:flex-row items-center gap-gutter">
+            <div
+                class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <div>
+                <h3 class="font-headline-md text-primary">Kunjungi Kami</h3>
+                <p class="text-on-surface-variant">Atau langsung saja datang ke lokasi: <span
+                        class="font-bold text-on-surface">Dasan Baru Jabon Utara, dekat TPQ Nasihatul Atfal.</span></p>
+            </div>
+        </div>
+    </section>
+    <footer class="w-full mt-stack-lg bg-surface-container-highest">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center px-container-margin py-stack-lg gap-gutter max-w-7xl mx-auto opacity-90">
+            <div>
+                <div class="font-headline-md text-headline-md text-primary mb-2">Warung Selera</div>
+                <p class="font-body-md text-body-md text-on-surface-variant">© 2024 Warung Selera. Cita Rasa Rumahan,
+                    Segar Setiap Hari.</p>
+            </div>
+            <div class="flex flex-wrap gap-stack-md">
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Info Kontak</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Lokasi Kami</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Syarat &amp;
+                    Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Order Success Modal (Hidden by default) -->
+    <div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-container-margin" id="success-modal">
+        <div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm"></div>
+        <div class="bg-surface relative z-10 w-full max-w-md p-stack-lg rounded-3xl shadow-2xl text-center transform scale-90 opacity-0 transition-all duration-300"
+            id="modal-content">
+            <div
+                class="w-24 h-24 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center mx-auto mb-stack-md animate-bounce">
+                <span class="material-symbols-outlined text-5xl"
+                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl mb-base text-primary">Pesanan Diterima!</h2>
+            <p class="text-on-surface-variant mb-stack-lg">Terima kasih sudah memesan di Warung Selera. Makanan Anda
+                sedang disiapkan dengan cinta dan akan segera dikirim.</p>
+            <div class="space-y-stack-sm">
+                <button
+                    class="w-full bg-primary text-on-primary font-bold py-3 rounded-full hover:scale-95 transition-transform"
+                    onclick="closeModal()">Kembali ke Beranda</button>
+                <p class="text-xs text-on-surface-variant">ID Pesanan: #WS-992184</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const cart = {
+            'q-bubur': { name: 'Bubur Ketan', price: 15000, count: 0 },
+            'q-bakso': { name: 'Bakso Spesial', price: 25000, count: 0 },
+            'q-sop': { name: 'Sop-Sopan', price: 20000, count: 0 }
+        };
+
+        function increment(id) {
+            cart[id].count++;
+            updateUI(id);
+        }
+
+        function decrement(id) {
+            if (cart[id].count > 0) {
+                cart[id].count--;
+                updateUI(id);
+            }
+        }
+
+        function updateUI(id) {
+            document.getElementById(id).innerText = cart[id].count;
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total-price');
+            const deliveryFeeEl = document.getElementById('delivery-fee');
+
+            let subtotal = 0;
+            let html = '';
+            let hasItems = false;
+
+            for (const key in cart) {
+                if (cart[key].count > 0) {
+                    hasItems = true;
+                    const itemTotal = cart[key].count * cart[key].price;
+                    subtotal += itemTotal;
+                    html += `
+                        <div class="flex justify-between items-center group">
+                            <div>
+                                <p class="font-bold text-on-surface">${cart[key].name}</p>
+                                <p class="text-xs text-on-surface-variant">${cart[key].count} x Rp ${cart[key].price.toLocaleString()}</p>
+                            </div>
+                            <span class="font-bold text-primary">Rp ${itemTotal.toLocaleString()}</span>
+                        </div>
+                    `;
+                }
+            }
+
+            if (!hasItems) {
+                cartItemsContainer.innerHTML = '<p class="text-on-surface-variant text-center py-base">Belum ada menu terpilih.</p>';
+                subtotalEl.innerText = 'Rp 0';
+                deliveryFeeEl.innerText = 'Rp 0';
+                totalEl.innerText = 'Rp 0';
+                return;
+            }
+
+            const deliveryFee = subtotal >= 100000 ? 0 : 5000;
+
+            cartItemsContainer.innerHTML = html;
+            subtotalEl.innerText = `Rp ${subtotal.toLocaleString()}`;
+            deliveryFeeEl.innerText = deliveryFee === 0 ? 'GRATIS' : `Rp ${deliveryFee.toLocaleString()}`;
+            totalEl.innerText = `Rp ${(subtotal + deliveryFee).toLocaleString()}`;
+        }
+
+        function handlePlaceOrder() {
+            // Validate if cart is empty
+            const total = parseInt(document.getElementById('total-price').innerText.replace(/[^0-9]/g, ''));
+
+            if (total === 0 || (total === 5000 && document.getElementById('subtotal').innerText === 'Rp 0')) {
+                alert('Silakan pilih menu terlebih dahulu.');
+                return;
+            }
+
+            const modal = document.getElementById('success-modal');
+            const content = document.getElementById('modal-content');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-90', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            const content = document.getElementById('modal-content');
+            content.classList.add('scale-90', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                window.location.href = "index.html";
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
